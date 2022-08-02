@@ -3,11 +3,11 @@ import profilePage from '../pages/profile/ProfilePage.vue'
 import profilePostsPage from '../pages/profile/ProfilePostsPage.vue'
 
 // routes
-import auth from '../pages/login/router'
-import wallet from '../pages/wallet/router'
+import auth from '@/pages/login/router'
+import wallet from '@/pages/wallet/router'
 // single pages
-import newsPage from '../pages/news/NewsPage.vue'
-import notFoundPage from '../pages/NotFound.vue'
+import newsPage from '@/pages/news/NewsPage.vue'
+import notFoundPage from '@/pages/NotFound.vue'
 
 import { routePropResolver } from './util'
 

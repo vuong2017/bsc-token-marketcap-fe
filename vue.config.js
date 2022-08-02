@@ -1,4 +1,7 @@
 // https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
+const path = require('path')
+const vueSrc = './src'
+
 module.exports = {
   css: {
     loaderOptions: {
@@ -12,7 +15,14 @@ module.exports = {
       }
     }
   },
-
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, vueSrc)
+      },
+      extensions: ['.js', '.vue', '.json']
+    }
+  },
   devServer: {
     watchOptions: {
       clientLogLevel: 'warning'

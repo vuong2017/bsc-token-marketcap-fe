@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import SideBar from '../../components/sider-bar/Index.vue'
+import SideBar from '@/components/sider-bar/Index.vue'
 
 export default {
   name: 'AuthLayout',
