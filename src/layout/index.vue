@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import AuthLayout from './auth-layout/Index.vue'
-import AdminLayout from './admin-layout/Index.vue'
+import AuthLayout from '@/layout/auth-layout/Index.vue'
+import AdminLayout from '@/layout/admin-layout/Index.vue'
 
 export default {
   name: 'AppLayout',
