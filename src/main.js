@@ -1,8 +1,8 @@
 import Vue from 'vue'
 
-import AppLayout from './layout/index.vue'
 import router from './router'
 import store from './store'
+import AppLayout from './layout/Index.vue'
 
 import './mixins'
 import './plugins'
@@ -13,19 +13,20 @@ import './assets/fonts/bebasneue.css'
 
 Vue.config.productionTip = false
 
-const commitWindowWidth = () => store.commit('dom/SET_WINDOW_WIDTH', window.innerWidth)
+const commitWindowWidth = () =>
+  store.commit('dom/SET_WINDOW_WIDTH', window.innerWidth)
 
 new Vue({
   name: 'Root',
   router,
   store,
-  mounted () {
+  mounted() {
     commitWindowWidth()
     window.addEventListener('resize', commitWindowWidth)
   },
 
-  beforeDestroy () {
+  beforeDestroy() {
     window.removeEventListener('resize', commitWindowWidth)
   },
-  render: h => h(AppLayout)
+  render: (h) => h(AppLayout)
 }).$mount('#app')
