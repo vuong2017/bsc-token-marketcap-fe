@@ -9,6 +9,7 @@ module.exports = {
     '@vue/standard'
   ],
   rules: {
+    'space-before-function-paren': 'off',
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await

@@ -2,10 +2,11 @@
 import profilePage from '../pages/profile/ProfilePage.vue'
 import profilePostsPage from '../pages/profile/ProfilePostsPage.vue'
 
+// routes
+import auth from '../pages/login/router'
 // single pages
 import homePage from '../pages/Home.vue'
 import newsPage from '../pages/news/NewsPage.vue'
-import loginPage from '../pages/Login.vue'
 import notFoundPage from '../pages/NotFound.vue'
 
 import { routePropResolver } from './util'
@@ -36,12 +37,7 @@ export const routes = [
       }
     ]
   },
-  {
-    path: '/login',
-    name: 'login',
-    component: loginPage,
-    meta: { title: 'Login' }
-  },
+  ...auth,
   {
     path: '*',
     component: notFoundPage,
