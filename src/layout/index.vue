@@ -4,9 +4,10 @@
       <AuthLayout v-if="this.$route.meta.layout === 'AuthLayout'">
         <router-view />
       </AuthLayout>
-      <AdminLayout v-else>
+      <AdminLayout v-if="this.$route.meta.layout === 'AdminLayout'">
         <router-view />
       </AdminLayout>
+      <router-view></router-view>
     </transition>
   </div>
 </template>
