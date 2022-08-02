@@ -1,11 +1,7 @@
 <template>
   <div id="app">
-    <AuthLayout v-if="this.$route.meta.layout === 'AuthLayout'">
-      <router-view />
-    </AuthLayout>
-    <AdminLayout v-if="this.$route.meta.layout === 'AdminLayout'">
-      <router-view />
-    </AdminLayout>
+    <AuthLayout v-if="this.$route.meta.layout === 'AuthLayout'" />
+    <AdminLayout v-else-if="this.$route.meta.layout === 'AdminLayout'" />
     <router-view v-else/>
   </div>
 </template>
