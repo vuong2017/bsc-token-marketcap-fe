@@ -1,25 +1,16 @@
 <template>
   <div id="app">
-    <AppHeader></AppHeader>
-    <div class="wrapper">
-      <transition name="fade">
-        <router-view></router-view>
-      </transition>
-    </div>
-    <AppFooter></AppFooter>
+    <el-breadcrumb separator="/">
+      <el-breadcrumb-item :to="{ path: '/' }">homepage</el-breadcrumb-item>
+      <el-breadcrumb-item><a href="/">promotion management</a></el-breadcrumb-item>
+      <el-breadcrumb-item>promotion list</el-breadcrumb-item>
+      <el-breadcrumb-item>promotion detail</el-breadcrumb-item>
+    </el-breadcrumb>
   </div>
-
 </template>
 
 <script>
-import AppHeader from './Header.vue'
-import AppFooter from './Footer.vue'
-
 export default {
-  name: 'AppLayout',
-  components: {
-    AppHeader,
-    AppFooter
-  }
+  name: 'AppLayout'
 }
-</script>s
+</script>
