@@ -5,6 +5,9 @@ export default [
     path: '/login',
     name: 'login',
     component: LoginPage,
-    meta: { title: 'Login' }
+    meta: {
+      title: 'Login',
+      layout: 'AuthLayout'
+    }
   }
 ]
