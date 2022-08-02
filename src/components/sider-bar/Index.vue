@@ -36,7 +36,6 @@ export default {
 
 <style lang="scss" scoped>
 .sider-bar {
-  height: 100vh;
   .el-menu {
     width: 200px;
     height: 100%;

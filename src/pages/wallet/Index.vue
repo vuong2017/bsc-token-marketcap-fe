@@ -1,17 +1,19 @@
 <template>
-  <div class="home-page">
-    Wallet Page
+  <div class="wallet-page">
+    <ListWallet />
   </div>
 </template>
 
 <script>
+import ListWallet from './components/ListWallet.vue'
+
 export default {
-  name: 'WalletPage'
+  name: 'WalletPage',
+  components: {
+    ListWallet
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-.home-page {
-  padding: 20px;
-}
 </style>
